@@ -1,7 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import Image from "next/image";
+import { useState, useEffect } from "react"; // useEffect import qilindi
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 
 const images = ["/carousel1.jpg", "/carousel2.jpg", "/carousel3.jpg"];
 

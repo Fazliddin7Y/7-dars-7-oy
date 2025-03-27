@@ -1,26 +1,34 @@
+"use client";
+
 export default function Services() {
-    return (
-      <section className="py-16 bg-gray-100 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">Our Services</h2>
-        <p className="text-gray-600 mt-4">We offer the best security services for your safety.</p>
-        
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-2xl font-semibold text-gray-700">24/7 Surveillance</h3>
-            <p className="text-gray-500 mt-2">We monitor your premises round the clock.</p>
-          </div>
-  
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-2xl font-semibold text-gray-700">Security Guards</h3>
-            <p className="text-gray-500 mt-2">Our trained professionals ensure your safety.</p>
-          </div>
-  
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-2xl font-semibold text-gray-700">Alarm Systems</h3>
-            <p className="text-gray-500 mt-2">We install and maintain top-notch security systems.</p>
-          </div>
+  const services = [
+    {
+      title: "Professional Security",
+      description: "We provide top-notch security services for your business.",
+    },
+    {
+      title: "24/7 Surveillance",
+      description: "Our team monitors your premises around the clock.",
+    },
+    {
+      title: "Emergency Response",
+      description: "Quick and efficient response to any security emergencies.",
+    },
+  ];
+
+  return (
+    <div className="py-12 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="p-6 bg-white rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
+              <p className="text-gray-600">{service.description}</p>
+            </div>
+          ))}
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </div>
+  );
+}
